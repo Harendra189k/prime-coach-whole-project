@@ -14,7 +14,6 @@ router.use(cors());
 router.post("/coachsign", async (req, res) => {
   const { firstName, lastName, email, phone, password } = req.body;
 
-  // Basic validation
   if (!firstName || !lastName || !email || !phone || !password) {
     return res.status(400).json({ message: "All fields are required." });
   }
@@ -32,7 +31,7 @@ router.post("/coachsign", async (req, res) => {
     const savedCoach = await newCoach.save();
     res.status(201).json({ savedCoach, status: 201 });
   } catch (err) {
-    console.error(err); // Log the error for debugging
+    console.error(err); 
     res.status(500).json({ message: "Internal server error." });
   }
 });

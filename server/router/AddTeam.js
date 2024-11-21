@@ -4,7 +4,6 @@ const AddTeam = require("../models/addTeamSchema")
 
 
 // Add Team 
-
 router.post("/addteam", async (req, res) => {
  
   const { teamName, sportType, coachName } = req.body;

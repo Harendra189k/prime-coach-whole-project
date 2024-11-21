@@ -4,7 +4,6 @@ const AddPlayer = require("../models/addPlayerSchema")
 
 
 // Add Player 
-
 router.post("/addplayer", async (req, res) => {
  
   const { firstName, lastName, email, category } = req.body;
